@@ -1,0 +1,2553 @@
+{
+  "COMP": [
+    {
+      "department": "COMP",
+      "course_number": "50",
+      "course_id": "COMP 50",
+      "course_name": "First-Year Seminar: Everyday Computing.",
+      "credits": "3",
+      "description": "The goal of this first-year seminar is to understand the use of computing technology in our daily activities.  In this course, we will study various examples of how computing solves problems in different aspects in our daily life. Honors version available.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": " FY-SEMINAR.",
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "60",
+      "course_id": "COMP 60",
+      "course_name": "First-Year Seminar: Robotics with LEGO®.",
+      "credits": "3",
+      "description": "This seminar explores the process of design and the nature of computers by designing, building, and programming LEGO robots.  Competitions to evaluate various robots are generally held at the middle and at the end of the semester.  Previous programming experience is not required. Honors version available.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": " FY-SEMINAR.",
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "65",
+      "course_id": "COMP 65",
+      "course_name": "First-Year Seminar: Folding, from Paper to Proteins.",
+      "credits": "3",
+      "description": "Explore the art of origami, the science of protein, and the mathematics of robotics through lectures, discussions, and projects involving artistic folding, mathematical puzzles, scientific exploration, and research. Honors version available.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": " FY-SEMINAR.",
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "89",
+      "course_id": "COMP 89",
+      "course_name": "First -Year Seminar: Special Topics.",
+      "credits": "3",
+      "description": "Special topics course.  Content will vary each semester. Honors version available.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": " FY-SEMINAR.",
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "110",
+      "course_id": "COMP 110",
+      "course_name": "Introduction to Programming.",
+      "credits": "3",
+      "description": "Introduces students to programming from a computational perspective. With an emphasis on modern applications in society, students gain experience with problem decomposition, algorithms for data analysis, abstraction design, and ethics in computing. No prior programming experience expected. Foundational concepts include data types, sequences, boolean logic, control flow, functions/methods, recursion, classes/objects, input/output, and data organization and transformations. Students may not enroll in COMP 110 after receiving credit for COMP 210. Honors version available.",
+      "requisites": {
+        "prerequisites": [
+          [
+            [
+              "MATH 130",
+              "MATH 152",
+              "MATH 210",
+              "MATH 231",
+              "MATH 129P",
+              "PHIL 155",
+              "STOR 120",
+              "STOR 151",
+              "STOR 155"
+            ]
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "MATH 130": "C",
+        "MATH 152": "C",
+        "MATH 210": "C",
+        "MATH 231": "C",
+        "MATH 129P": "C",
+        "PHIL 155": "C",
+        "STOR 120": "C",
+        "STOR 151": "C",
+        "STOR 155": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": " FC-QUANT.",
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "116",
+      "course_id": "COMP 116",
+      "course_name": "Introduction to Scientific Programming.",
+      "credits": "3",
+      "description": "An introduction to programming for computationally oriented scientists. Fundamental programming skills, typically using MATLAB or Python. Problem analysis and algorithm design with examples drawn from simple numerical and discrete problems.",
+      "requisites": {
+        "prerequisites": [
+          [
+            [
+              "MATH 130"
+            ],
+            [
+              "MATH 152"
+            ],
+            [
+              "MATH 210"
+            ],
+            [
+              "MATH 231"
+            ],
+            [
+              "MATH 129P"
+            ],
+            [
+              "PHIL 155"
+            ],
+            [
+              "STOR 120"
+            ],
+            [
+              "STOR 151"
+            ],
+            [
+              "STOR 155"
+            ]
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "MATH 130": "C",
+        "MATH 152": "C",
+        "MATH 210": "C",
+        "MATH 231": "C",
+        "MATH 129P": "C",
+        "PHIL 155": "C",
+        "STOR 120": "C",
+        "STOR 151": "C",
+        "STOR 155": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "126",
+      "course_id": "COMP 126",
+      "course_name": "Practical Web Design and Development for Everyone.",
+      "credits": "3",
+      "description": "A ground-up introduction to current principles, standards, and best practice in website design, usability, accessibility, development, and management through project-based skills development in HTML5, CSS, and basic JavaScript. Intended for nonmajors.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": " FC-CREATE.",
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "190",
+      "course_id": "COMP 190",
+      "course_name": "Topics in Computing.",
+      "credits": "3",
+      "description": "Special topics in computing targeted primarily for students with no computer science background. This course has variable content and may be taken multiple times for credit. As the content will vary with each offering, there are no set requisites but permission from instructor is required.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "210",
+      "course_id": "COMP 210",
+      "course_name": "Data Structures and Analysis.",
+      "credits": "3",
+      "description": "This course will teach you how to organize the data used in computer programs so that manipulation of that data can be done efficiently on large problems and large data instances.  Rather than learning to use the data structures found in the libraries of programming languages, you will be learning how those libraries are constructed, and why the items that are included in them are there (and why some are excluded).",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 110",
+            "MATH 231"
+          ]
+        ],
+        "corequisites": [
+          [
+            "COMP 283",
+            "MATH 381",
+            "STOR 315"
+          ]
+        ]
+      },
+      "grade_requirements": {
+        "COMP 110": "C",
+        "MATH 231": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "211",
+      "course_id": "COMP 211",
+      "course_name": "Systems Fundamentals.",
+      "credits": "3",
+      "description": "This is the first course in the introductory systems sequence. Students enter the course having taken an introductory programming course in a high-level programming language (COMP 110) and a course in discrete structures. The overarching goal is to bridge the gap between a students' knowledge of a high-level programming language (COMP 110) and computer organization (COMP 311).",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 210"
+          ],
+          [
+            "COMP 283",
+            "MATH 381",
+            "STOR 315"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 210": "C",
+        "COMP 283": "C",
+        "MATH 381": "C",
+        "STOR 315": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "222",
+      "course_id": "COMP 222",
+      "course_name": "ACM Programming Competition Practice.",
+      "credits": "1",
+      "description": "Structured practice to develop and refine programming skills in preparation for the ACM programming competition.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "227",
+      "course_id": "COMP 227",
+      "course_name": "Effective Peer Teaching in Computer Science.",
+      "credits": "3",
+      "description": "Fundamentals of computer science pedagogy and instructional practice with primary focus on training undergraduate learning assistants for computer science courses. Emphasis on awareness of social identity in learning, active learning in the computer science classroom, and effective mentorship. All students must be granted a computer science learning assistantship or obtain prior approval to substitute relevant practicum experience prior to enrollment.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": [
+          [
+            [
+              "COMP 210",
+              "COMP 401"
+            ]
+          ]
+        ]
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": " HI-LEARNTA.",
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "283",
+      "course_id": "COMP 283",
+      "course_name": "Discrete Structures.",
+      "credits": "3",
+      "description": "Introduces discrete structures (sets, tuples, relations, functions, graphs, trees) and the formal mathematics (logic, proof, induction) used to establish their properties and those of algorithms that work with them. Develops problem-solving skills through puzzles and applications central to computer science. Honors version available.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "MATH 231",
+            "MATH 241"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "MATH 231": "C",
+        "MATH 241": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": " FC-QUANT.",
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "290",
+      "course_id": "COMP 290",
+      "course_name": "Special Topics in Computer Science.",
+      "credits": "1",
+      "description": "Non-technical topics in computer science for computer science majors. May not be used to satisfy any degree requirements for a computer science major. This course has variable content and may be taken multiple times for credit.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "293",
+      "course_id": "COMP 293",
+      "course_name": "Internship in Computer Science.",
+      "credits": "3",
+      "description": "Computer science majors only. A signed learning contract is required before a student may register. Work experience in non-elementary computer science. Permission of instructor and  director of undergraduate studies required.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "MATH 231",
+            "MATH 241"
+          ],
+          [
+            "COMP 210",
+            "COMP 211",
+            "COMP 301"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 210": "C",
+        "COMP 211": "C",
+        "COMP 301": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": " HI-INTERN.",
+      "grading_status": "Pass/Fail."
+    },
+    {
+      "department": "COMP",
+      "course_number": "301",
+      "course_id": "COMP 301",
+      "course_name": "Foundations of Programming.",
+      "credits": "3",
+      "description": "Students will learn how to reason about how their code is structured, identify whether a given structure is effective in a given context, and look at ways of organizing units of code that support larger programs. In a nutshell, the primary goal of the course is to equip students with tools and techniques that will help them not only in later courses in the major but also in their careers afterwards.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 210"
+          ],
+          [
+            "COMP 283",
+            "MATH 381",
+            "STOR 315"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 210": "C",
+        "COMP 283": "C",
+        "MATH 381": "C",
+        "STOR 315": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "311",
+      "course_id": "COMP 311",
+      "course_name": "Computer Organization.",
+      "credits": "3",
+      "description": "Introduction to computer organization and design. Students will be introduced to the conceptual design of a basic microprocessor, along with assembly programming.  The course includes fundamental concepts such as binary numbers, binary arithmetic, and representing information as well as instructions. Students learn to program in assembly (i.e., machine) language.  The course covers the fundamentals of computer hardware design,  transistors and logic gates, progressing through basic combinational and sequential components, culminating in the conceptual design CPU.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 211"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 211": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "380",
+      "course_id": "COMP 380",
+      "course_name": "Technology, Ethics, & Culture.",
+      "credits": "3",
+      "description": "This discussion-based, participatory course explores the personal, sociocultural, and ethical effects and implications of the development and use of computing technologies and the Internet. Honors version available.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": " FC-VALUES.",
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "388",
+      "course_id": "COMP 388",
+      "course_name": "The Internet: Studies and Stories.",
+      "credits": "3",
+      "description": "An interdisciplinary look at historical, social, cultural, ethical, psychological and other dimensions of the Internet through the lenses of works in Internet studies and science fiction. Students design and lead class sessions, conduct and present on research, and create digital art and artifacts.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 380"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 380": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": " FC-VALUES.",
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "390",
+      "course_id": "COMP 390",
+      "course_name": "Computer Science Elective Topics.",
+      "credits": "3",
+      "description": "Elective topics in computer science for computer science majors. May not be used to satisfy any degree requirements for a computer science major. This course has variable content and may be taken multiple times for credit.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "393",
+      "course_id": "COMP 393",
+      "course_name": "Software Engineering Practicum.",
+      "credits": "1-3",
+      "description": "Students develop a software program for a real client under the supervision of a faculty member. Projects may be proposed by the student but must have real users. Course is intended for students desiring practical experiences in software engineering but lacking the experience required for external opportunities. Majors only.",
+      "requisites": {
+        "prerequisites": [
+          [
+            [
+              "COMP 211",
+              "COMP 301"
+            ]
+          ],
+          [
+            [
+              "COMP 401",
+              "COMP 410",
+              "COMP 411"
+            ]
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 211": "C",
+        "COMP 301": "C",
+        "COMP 401": "C",
+        "COMP 410": "C",
+        "COMP 411": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "401",
+      "course_id": "COMP 401",
+      "course_name": "Foundation of Programming.",
+      "credits": "4",
+      "description": "Required preparation, a first formal course in computer programming (e.g., COMP 110, COMP 116). Advanced programming: object-oriented design, classes, interfaces, packages, inheritance, delegation, observers, MVC (model view controller), exceptions, assertions. Students may not receive credit for this course after receiving credit for COMP 301. Honors version available.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "MATH 231"
+          ],
+          [
+            "MATH 241"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "MATH 231": "C",
+        "MATH 241": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "410",
+      "course_id": "COMP 410",
+      "course_name": "Data Structures.",
+      "credits": "3",
+      "description": "The analysis of data structures and their associated algorithms. Abstract data types, lists, stacks, queues, trees, and graphs. Sorting, searching, hashing. Students may not receive credit for this course after receiving credit for COMP 210.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "MATH 231"
+          ],
+          [
+            "COMP 401"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "MATH 231": "C",
+        "COMP 401": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "411",
+      "course_id": "COMP 411",
+      "course_name": "Computer Organization.",
+      "credits": "4",
+      "description": "Digital logic, circuit components. Data representation, computer architecture and implementation, assembly language programming. Students may not receive credit for this course after receiving credit for COMP 311.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "MATH 231"
+          ],
+          [
+            "COMP 401"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "MATH 231": "C",
+        "COMP 401": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "421",
+      "course_id": "COMP 421",
+      "course_name": "Files and Databases.",
+      "credits": "3",
+      "description": "Placement of data on secondary storage. File organization. Database history, practice, major models, system structure and design. Previously offered as COMP 521.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 210"
+          ],
+          [
+            "COMP 401"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 210": "C",
+        "COMP 401": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "423",
+      "course_id": "COMP 423",
+      "course_name": "Foundations of Software Engineering.",
+      "credits": "3",
+      "description": "This course introduces students to the fundamentals of Software Engineering. Students gain experience with design thinking and processes, technical communication, team collaboration, project management methodology, the software development lifecycle, and more, with an emphasis on today's best industrial practices.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 211"
+          ],
+          [
+            "COMP 301"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 211": "C",
+        "COMP 301": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": " FC-CREATE.",
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "426",
+      "course_id": "COMP 426",
+      "course_name": "Modern Web Programming.",
+      "credits": "3",
+      "description": "Developing applications for the World Wide Web including both client-side and server-side programming. Emphasis on Model-View-Controller architecture, AJAX, RESTful Web services, and database interaction.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 211"
+          ],
+          [
+            "COMP 401"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 211": "C",
+        "COMP 401": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "431",
+      "course_id": "COMP 431",
+      "course_name": "Internet Services and Protocols.",
+      "credits": "3",
+      "description": "Application-level protocols HTTP, SMTP, FTP, transport protocols TCP and UDP, and the network-level protocol IP. Internet architecture, naming, addressing, routing, and DNS. Sockets programming. Physical-layer technologies. Ethernet, ATM, and wireless.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 210"
+          ],
+          [
+            "COMP 401"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 210": "C",
+        "COMP 401": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "433",
+      "course_id": "COMP 433",
+      "course_name": "Mobile Computing Systems.",
+      "credits": "3",
+      "description": "Principles of mobile applications, mobile OS, mobile networks, and embedded sensor systems. Coursework includes programming assignments, reading from recent research literature, and a semester long project on a mobile computing platform (e.g., Android, Arduino, iOS, etc.).",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 210"
+          ],
+          [
+            "COMP 401"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 210": "C",
+        "COMP 401": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "435",
+      "course_id": "COMP 435",
+      "course_name": "Computer Security Concepts.",
+      "credits": "3",
+      "description": "Introduction to topics in computer security including confidentiality, integrity, availability, authentication policies, basic cryptography and cryptographic protocols, ethics, and privacy. A student may not receive credit for this course after receiving credit for COMP 535.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 210"
+          ],
+          [
+            "COMP 401"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 210": "C",
+        "COMP 401": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "447",
+      "course_id": "COMP 447",
+      "course_name": "Quantum Computing.",
+      "credits": "3",
+      "description": "Recommended preparation, some knowledge of basic linear algebra. An introduction to quantum computing. Basic math and quantum mechanics necessary to understand the operation of quantum bits. Quantum gates, circuits, and algorithms, including Shor's algorithm for factoring and Grover's search algorithm. Entanglement and error correction. Quantum encryption, annealing, and simulation. Brief discussion of technologies.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "MATH 232"
+          ],
+          [
+            "PHYS 116"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "455",
+      "course_id": "COMP 455",
+      "course_name": "Models of Languages and Computation.",
+      "credits": "3",
+      "description": "Introduction to the theory of computation. Finite automata, regular languages, pushdown automata, context-free languages, and Turing machines. Undecidable problems.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 210"
+          ],
+          [
+            "COMP 283"
+          ],
+          [
+            "MATH 381"
+          ],
+          [
+            "STOR 315"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 210": "C",
+        "COMP 283": "C",
+        "MATH 381": "C",
+        "STOR 315": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "475",
+      "course_id": "COMP 475",
+      "course_name": "2D Computer Graphics.",
+      "credits": "3",
+      "description": "Fundamentals of modern software 2D graphics; geometric primitives, scan conversion, clipping, transformations, compositing, texture sampling. Advanced topics may include gradients, antialiasing, filtering, parametric curves, and geometric stroking.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 210"
+          ],
+          [
+            "COMP 401"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 210": "C",
+        "COMP 401": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "486",
+      "course_id": "COMP 486",
+      "course_name": "Applications of Natural Language Processing.",
+      "credits": "3",
+      "description": "Natural language processing (NLP) uses mathematics, machine learning, linguistics, and computer science to make language computationally accessible and analyzable. In this course, you will learn to do essential NLP tasks using Python and survey a selection of NLP applications to describe the problems or tasks each addresses, the materials and methods used, and how the applications are evaluated. At least a semester of Python or equivalent practical experience is highly recommended.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "487",
+      "course_id": "COMP 487",
+      "course_name": "Information Retrieval.",
+      "credits": "3",
+      "description": "Study of information retrieval and question answering techniques, including document classification, retrieval and evaluation techniques, handling of large data collections, and the use of feedback.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "488",
+      "course_id": "COMP 488",
+      "course_name": "Data Science in the Business World.",
+      "credits": "3",
+      "description": "Business and Computer Science students join forces in this course to create data-driven business insights. We transgress the data science pipeline using cloud computing, artificial intelligence, and real-world datasets. Students acquire hands-on skills in acquiring data, wrangling vast unstructured data, building advanced models, and telling compelling stories with data that managers can understand.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "495",
+      "course_id": "COMP 495",
+      "course_name": "Mentored Research in Computer Science.",
+      "credits": "3",
+      "description": "Independent research conducted under the direct mentorship of a computer science faculty member. If repeated, the repeated course can not be counted for the major. For computer science majors only. Permission of instructor required.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": " RESEARCH.",
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "496",
+      "course_id": "COMP 496",
+      "course_name": "Independent Study in Computer Science.",
+      "credits": "3",
+      "description": "Permission of the department. Computer science majors only. For advanced majors in computer science who wish to conduct an independent study or research project with a faculty supervisor. May be taken repeatedly for up to a total of six credit hours.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "520",
+      "course_id": "COMP 520",
+      "course_name": "Compilers.",
+      "credits": "3",
+      "description": "Design and construction of compilers. Theory and pragmatics of lexical, syntactic, and semantic analysis. Interpretation. Code generation for a modern architecture.  Run-time environments. Includes a large compiler implementation project.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 301"
+          ],
+          [
+            "COMP 410"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 301": "C",
+        "COMP 410": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "523",
+      "course_id": "COMP 523",
+      "course_name": "Software Engineering Laboratory.",
+      "credits": "4",
+      "description": "Organization and scheduling of software engineering projects, structured programming, and design. Each team designs, codes, and debugs program components and synthesizes them into a tested, documented program product.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 301"
+          ],
+          [
+            "COMP 401"
+          ],
+          [
+            "COMP 421"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": " FC-CREATE.",
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "524",
+      "course_id": "COMP 524",
+      "course_name": "Programming Language Concepts.",
+      "credits": "3",
+      "description": "Concepts of high-level programming and their realization in specific languages. Data types, scope, control structures, procedural abstraction, classes, concurrency. Run-time implementation.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 301"
+          ],
+          [
+            "COMP 401"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 301": "C",
+        "COMP 401": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "530",
+      "course_id": "COMP 530",
+      "course_name": "Operating Systems.",
+      "credits": "3",
+      "description": "Types of operating systems. Concurrent programming. Management of storage, processes, devices. Scheduling, protection. Case study. Course includes a programming laboratory. Honors version available.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 301"
+          ],
+          [
+            "COMP 401"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 301": "C",
+        "COMP 401": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "533",
+      "course_id": "COMP 533",
+      "course_name": "Distributed Systems and Concurrent Programming.",
+      "credits": "3",
+      "description": "Distributed systems, concurrent programming, and their goals; resource naming, synchronization of distributed processes; consistency and replication; fault tolerance; security and trust; distributed object-based systems; distributed file systems; distributed Web-based systems; and peer-to-peer systems.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 301"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 301": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "535",
+      "course_id": "COMP 535",
+      "course_name": "Introduction to Computer Security.",
+      "credits": "3",
+      "description": "Principles of securing the creation, storage, and transmission of data and ensuring its integrity, confidentiality and availability. Topics include access control, cryptography and cryptographic protocols, network security, and online privacy.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 301"
+          ],
+          [
+            "COMP 401"
+          ],
+          [
+            "COMP 550"
+          ],
+          [
+            "COMP 283"
+          ],
+          [
+            "MATH 381"
+          ],
+          [
+            "STOR 315"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 301": "C",
+        "COMP 401": "C",
+        "COMP 550": "C",
+        "COMP 283": "C",
+        "MATH 381": "C",
+        "STOR 315": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "537",
+      "course_id": "COMP 537",
+      "course_name": "Cryptography.",
+      "credits": "3",
+      "description": "Introduces both the applied and theoretical sides of cryptography. Main focus will be on the inner workings of cryptographic primitives and how to use them correctly. Begins with standard cryptographic tools such as symmetric and public-key encryption, message authentication, key exchange, and digital signatures before moving on to more advanced topics. Potential advanced topics include elliptic curves, post-quantum cryptography, and zero-knowledge proofs. Honors version available.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 211"
+          ],
+          [
+            "COMP 301"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": "Permission of instructor may be required",
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "541",
+      "course_id": "COMP 541",
+      "course_name": "Digital Logic and Computer Design.",
+      "credits": "4",
+      "description": "This course is an introduction to digital logic as well as the structure and electronic design of modern processors. Students will implement a working computer during the laboratory sessions.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 301"
+          ],
+          [
+            "COMP 401"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 301": "C",
+        "COMP 401": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": " FC-CREATE.",
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "545",
+      "course_id": "COMP 545",
+      "course_name": "Programming Intelligent Physical Systems.",
+      "credits": "3",
+      "description": "Introduction to programming embedded control systems that lie at the heart of robots, drones, and autonomous vehicles. Topics will include modeling physical systems, designing feedback controllers, timing analysis of embedded systems and software, software implementations of controllers on distributed embedded platforms and their verification. Honors version available.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 301"
+          ],
+          [
+            "COMP 311"
+          ],
+          [
+            "COMP 411"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 301": "C",
+        "COMP 311": "C",
+        "COMP 411": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "550",
+      "course_id": "COMP 550",
+      "course_name": "Algorithms and Analysis.",
+      "credits": "3",
+      "description": "Formal specification and verification of programs. Techniques of algorithm analysis. Problem-solving paradigms. Survey of selected algorithms.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 211"
+          ],
+          [
+            "COMP 410"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 211": "C",
+        "COMP 410": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": " FC-QUANT.",
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "555",
+      "course_id": "COMP 555",
+      "course_name": "Bioalgorithms.",
+      "credits": "3",
+      "description": "Bioinformatics algorithms. Topics include DNA restriction mapping, finding regulatory motifs, genome rearrangements, sequence alignments, gene prediction, graph algorithms, DNA sequencing, protein sequencing, combinatorial pattern matching, approximate pattern matching, clustering and evolution, tree construction, Hidden Markov Models, randomized algorithms.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 210"
+          ],
+          [
+            "COMP 401"
+          ],
+          [
+            "MATH 231"
+          ],
+          [
+            "BIOL 452"
+          ],
+          [
+            "MATH 553"
+          ],
+          [
+            "BIOL 525"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 210": "C",
+        "COMP 401": "C",
+        "MATH 231": "C",
+        "BIOL 452": "C",
+        "MATH 553": "C",
+        "BIOL 525": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "560",
+      "course_id": "COMP 560",
+      "course_name": "Artificial Intelligence.",
+      "credits": "3",
+      "description": "Introduction to techniques and applications of modern artificial intelligence. Combinatorial search, probabilistic models and reasoning, and applications to natural language understanding, robotics, and computer vision.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 211"
+          ],
+          [
+            "COMP 401"
+          ],
+          [
+            "MATH 231"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 211": "C",
+        "COMP 401": "C",
+        "MATH 231": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "562",
+      "course_id": "COMP 562",
+      "course_name": "Introduction to Machine Learning.",
+      "credits": "3",
+      "description": "Machine learning as applied to speech recognition, tracking, collaborative filtering, and recommendation systems. Classification, regression, support vector machines, hidden Markov models, principal component analysis, and deep learning. Honors version available.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 211"
+          ],
+          [
+            "COMP 401"
+          ],
+          [
+            "MATH 233"
+          ],
+          [
+            "STOR 435"
+          ],
+          [
+            "STOR 535"
+          ],
+          [
+            "BIOS 650"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 211": "C",
+        "COMP 401": "C",
+        "MATH 233": "C",
+        "STOR 435": "C",
+        "STOR 535": "C",
+        "BIOS 650": "C"
+      },
+      "requisites_note": "Permission of instructor may be required",
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "572",
+      "course_id": "COMP 572",
+      "course_name": "Computational Photography.",
+      "credits": "3",
+      "description": "The course provides a hands on introduction to techniques in computational photography--the process of digitally recording light and then performing computational manipulations on those measurements to produce an image or other representation. The course includes an introduction to relevant concepts in computer vision and computer graphics.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 301"
+          ],
+          [
+            "COMP 401"
+          ],
+          [
+            "MATH 347"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 301": "C",
+        "COMP 401": "C",
+        "MATH 347": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "575",
+      "course_id": "COMP 575",
+      "course_name": "Introduction to Computer Graphics.",
+      "credits": "3",
+      "description": "Hardware, software, and algorithms for computer graphics. Scan conversion, 2-D and 3-D transformations, object hierarchies. Hidden surface removal, clipping, shading, and antialiasing. Not for graduate computer science credit.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 301"
+          ],
+          [
+            "COMP 401"
+          ],
+          [
+            "MATH 347"
+          ],
+          [
+            "MATH 577"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 301": "C",
+        "COMP 401": "C",
+        "MATH 347": "C",
+        "MATH 577": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "576",
+      "course_id": "COMP 576",
+      "course_name": "Mathematics for Image Computing.",
+      "credits": "3",
+      "description": "Mathematics relevant to image processing and analysis using real image computing objectives and provided by computer implementations.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 116"
+          ],
+          [
+            "MATH 233"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 116": "C",
+        "MATH 233": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "577",
+      "course_id": "COMP 577",
+      "course_name": "Introduction to Computer Vision.",
+      "credits": "3",
+      "description": "Fundamentals of Computer Vision and overview of recent research problems in Computer Vision. This course attempts to answer the following questions: (a) How do we capture and process an image? (b) How do we develop machine perception that recognizes, detects, and segments objects? (c) How do we connect the 3D world to 2D images and reconstruct 3D from images? We also explore some Computer Vision algorithms' potential to introduce bias and cause harm, particularly among members of underrepresented communities, and consider the ways in which we as researchers and practitioners can do better.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 211"
+          ],
+          [
+            "COMP 301"
+          ],
+          [
+            "MATH 347"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": "Permission of instructor may be required",
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "581",
+      "course_id": "COMP 581",
+      "course_name": "Introduction to Robotics.",
+      "credits": "3",
+      "description": "Hands-on introduction to robotics with a focus on the computational aspects. Students will build and program mobile robots. Topics include kinematics, actuation, sensing, configuration spaces, control, and motion planning. Applications include industrial, mobile, personal, and medical robots. Honors version available.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 301"
+          ],
+          [
+            "COMP 401"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 301": "C",
+        "COMP 401": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "586",
+      "course_id": "COMP 586",
+      "course_name": "Natural Language Processing.",
+      "credits": "3",
+      "description": "Through this course, students will develop an understanding of the general field of Natural Language Processing with an emphasis on state-of-the-art solutions for classic NLP problems. Topics include: text representation and classification, parts-of-speech tagging, parsing, translation, and language modeling.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 301"
+          ],
+          [
+            "COMP 311"
+          ],
+          [
+            "COMP 562"
+          ],
+          [
+            "COMP 755"
+          ],
+          [
+            "STOR 565"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 301": "C",
+        "COMP 311": "C",
+        "COMP 562": "C",
+        "COMP 755": "C",
+        "STOR 565": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "590",
+      "course_id": "COMP 590",
+      "course_name": "Topics in Computer Science.",
+      "credits": "3",
+      "description": "This course has variable content and may be taken multiple times for credit. Different sections may be taken in the same semester. Honors version available.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 211"
+          ],
+          [
+            "COMP 301"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "616",
+      "course_id": "COMP 616",
+      "course_name": "Information Visualization.",
+      "credits": "3",
+      "description": "Data is everywhere. Charts, graphs, and other types of information visualizations help people to make sense of data. This course explores the design, development, and evaluation of these visualizations. By combining aspects of design, computer graphics, HCI, and data science, you will gain hands-on experience with creating visualizations, using exploratory tools, and architecting data narratives. Topics include interactive systems, user-centered design, graphical perception and cognition, data storytelling, and insight building. Throughout this course, you will work directly with stakeholders to analyze data from a variety of domains and applications.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "617",
+      "course_id": "COMP 617",
+      "course_name": "Visualization Design Methods.",
+      "credits": "3",
+      "description": "Data visualization combines computational, design, and cognitive principles to help people explore, communicate, and analyze large datasets. Developing effective visualizations often requires working closely with interdisciplinary teams to authentically reflect the needs of a data problem. This course will provide a hands-on introduction to common design methods for creating visualizations in different domains and problem constraints. Students will work with a variety of datasets to generate visualization solutions leveraging various design methodologies and media. Topics will include data sketching and crafting, user-centered design, task-driven design, cognitively-driven design, quantitative and qualitative experimental methods, and workshop methods.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "630",
+      "course_id": "COMP 630",
+      "course_name": "Operating System Implementation.",
+      "credits": "3",
+      "description": "Students will learn how to write OS kernel code in C and a small amount of assembly. Students will implement major components of the OS kernel, such as page tables, scheduling, and program loading.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 530"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": "Permission of instructor may be required",
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "631",
+      "course_id": "COMP 631",
+      "course_name": "Networked and Distributed Systems.",
+      "credits": "3",
+      "description": "Topics in designing global-scale computer networks (link layer, switching, IP, TCP, congestion control) and large-scale distributed systems (data centers, distributed hash tables, peer-to-peer infrastructures, name systems).",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 431"
+          ],
+          [
+            "COMP 530"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 431": "C",
+        "COMP 530": "C"
+      },
+      "requisites_note": "Permission of instructor may be required",
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "633",
+      "course_id": "COMP 633",
+      "course_name": "Parallel and Distributed Computing.",
+      "credits": "3",
+      "description": "Required preparation, a first course in operating systems and a first course in algorithms (e.g., COMP 530 and 550). Principles and practices of parallel and distributed computing. Models of computation. Concurrent programming languages and systems. Architectures. Algorithms and applications. Practicum.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "635",
+      "course_id": "COMP 635",
+      "course_name": "Wireless and Mobile Communications.",
+      "credits": "3",
+      "description": "This course builds an understanding of the core issues encountered in the design of wireless (vs. wired) networks. It also exposes students to fairly recent paradigms in wireless communication.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 431"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "636",
+      "course_id": "COMP 636",
+      "course_name": "Distributed Collaborative Systems.",
+      "credits": "3",
+      "description": "Design and implementation of distributed collaborative systems. Collaborative architectures, consistency of replicated objects, collaborative user-interfaces, application and system taxonomies, application-level multicast, performance, causality, operation transformation, and concurrency and access control.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 431"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": "Permission of instructor may be required",
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "637",
+      "course_id": "COMP 637",
+      "course_name": "Formal Methods for System Security.",
+      "credits": "3",
+      "description": "Formal methods provide a rigorous, mathematically grounded analysis of a system. Used as part of a security analysis, formal methods can provide verification that a system meets its security requirements. In this course students will learn about and gain experience using a variety of techniques, including symbolic execution, model checking, and proofs of equivalence and refinement. Students will develop an understanding of different specification logics and what can and cannot be expressed in each. Topics include assertion-based verification, simulation relations, linear temporal logic, information flow analysis, and hyperproperties.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 311"
+          ],
+          [
+            "COMP 455"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "COMP 311": "C",
+        "COMP 455": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "651",
+      "course_id": "COMP 651",
+      "course_name": "Computational Geometry.",
+      "credits": "3",
+      "description": "Required preparation, a first course in algorithms (e.g., COMP 550). Design and analysis of algorithms and data structures for geometric problems. Applications in graphics, CAD/CAM, robotics, GIS, and molecular biology.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 550"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "652",
+      "course_id": "COMP 652",
+      "course_name": "Logical Foundations of Program Correctness.",
+      "credits": "3",
+      "description": "This course is an upper-level undergraduate and graduate course about the use of mathematical proof techniques to verify the correctness of programs, algorithms and computer systems. The course will cover foundational concepts in logic, the theory of programming languages, and program verification. Students will learn about computer assisted theorem proving and will learn to use a proof assistant. Classes will be organized around problem sets and in-person lectures. In addition, students will work on a semester-long project developing a proof of correctness of a program or algorithms of their choosing.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 283"
+          ],
+          [
+            "COMP 210"
+          ],
+          [
+            "COMP 211"
+          ],
+          [
+            "COMP 301"
+          ],
+          [
+            "COMP 455"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "662",
+      "course_id": "COMP 662",
+      "course_name": "Scientific Computation II.",
+      "credits": "3",
+      "description": "Theory and practical issues arising in linear algebra problems derived from physical applications, e.g., discretization of ODEs and PDEs. Linear systems, linear least squares, eigenvalue problems, singular value decomposition.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "MATH 661"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "664",
+      "course_id": "COMP 664",
+      "course_name": "Deep Learning.",
+      "credits": "3",
+      "description": "Introduction to the field of deep learning and its applications. Basics of building and optimizing neural networks, including model architectures and training schemes.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 562"
+          ],
+          [
+            "COMP 755"
+          ],
+          [
+            "STOR 565"
+          ],
+          [
+            "MATH 201"
+          ],
+          [
+            "MATH 233"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": "Permission of instructor may be required",
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "667",
+      "course_id": "COMP 667",
+      "course_name": "Video Analysis with Deep Learning.",
+      "credits": "3",
+      "description": "The course aims to provide a thorough overview of deep learning methods for video analysis. It will also teach students how to analyze and present research papers. Throughout the course, we will discuss fundamental video processing techniques,  cover cutting edge research in video recognition and speculate about future research directions. Lastly, students will carry out a semester-long project, providing them with useful skills of how to work with video data and train various deep learning models on video datasets.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 560"
+          ],
+          [
+            "COMP 562"
+          ],
+          [
+            "STOR 565"
+          ],
+          [
+            "COMP 664"
+          ],
+          [
+            "COMP 755"
+          ],
+          [
+            "COMP 776"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "672",
+      "course_id": "COMP 672",
+      "course_name": "Simulation Modeling and Analysis.",
+      "credits": "3",
+      "description": "Introduces students to modeling, programming, and statistical analysis applicable to computer simulations. Emphasizes statistical analysis of simulation output for decision-making. Focuses on discrete-event simulations and discusses other simulation methodologies such as Monte Carlo and agent-based simulations. Students model, program, and run simulations using specialized software. Familiarity with computer programming recommended.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "STOR 555"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "683",
+      "course_id": "COMP 683",
+      "course_name": "Computational Biology.",
+      "credits": "3",
+      "description": "Algorithms and data mining techniques used in modern biomedical data science and single-cell bioinformatics. Graph signal processing, graph diffusion, clustering, multimodal data integration.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "MATH 577"
+          ],
+          [
+            "MATH 347"
+          ],
+          [
+            "COMP 562"
+          ],
+          [
+            "STOR 520"
+          ],
+          [
+            "STOR 565"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "MATH 577": "C",
+        "MATH 347": "C",
+        "COMP 562": "C",
+        "STOR 520": "C",
+        "STOR 565": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "690",
+      "course_id": "COMP 690",
+      "course_name": "Special Topics in Computer Science.",
+      "credits": "1-4",
+      "description": "This course has variable content and may be taken multiple times for credit.  COMP 690 courses do not count toward the major or minor.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "691H",
+      "course_id": "COMP 691H",
+      "course_name": "Honors Thesis in Computer Science.",
+      "credits": "3",
+      "description": "For computer science majors only and by permission of the department. Individual student research for students pursuing an honors thesis in computer science under the supervision of a departmental faculty adviser.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": " RESEARCH.",
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "692H",
+      "course_id": "COMP 692H",
+      "course_name": "Honors Thesis in Computer Science.",
+      "credits": "3",
+      "description": "Permission of the department.  Required of all students in the honors program in computer science.  The construction of a written honors thesis and an oral public presentation of the thesis are required.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": " RESEARCH.",
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "720",
+      "course_id": "COMP 720",
+      "course_name": "Compilers.",
+      "credits": "3",
+      "description": "Tools and techniques of compiler construction. Lexical, syntactic, and semantic analysis. Emphasis on code generation and optimization.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 455"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "721",
+      "course_id": "COMP 721",
+      "course_name": "Database Management Systems.",
+      "credits": "3",
+      "description": "Database management systems, implementation, and theory. Query languages, query optimization, security, advanced physical storage methods and their analysis.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 521"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "723",
+      "course_id": "COMP 723",
+      "course_name": "Software Design and Implementation.",
+      "credits": "3",
+      "description": "Principles and practices of software engineering. Object-oriented and functional approaches. Formal specification, implementation, verification, and testing. Software design patterns. Practicum.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 524"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "724",
+      "course_id": "COMP 724",
+      "course_name": "Programming Languages.",
+      "credits": "3",
+      "description": "Selected topics in the design and implementation of modern programming languages. Formal semantics. Type theory. Inheritance. Design of virtual machines. Garbage collection. Principles of restructuring compilers.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 455"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "730",
+      "course_id": "COMP 730",
+      "course_name": "Operating Systems.",
+      "credits": "3",
+      "description": "Theory, structuring, and design of operating systems. Sequential and cooperating processes. Single processor, multiprocessor, and distributed operating systems.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 530"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "734",
+      "course_id": "COMP 734",
+      "course_name": "Distributed Systems.",
+      "credits": "3",
+      "description": "Design and implementation of distributed computing systems and services. Inter-process communication and protocols, naming and name resolution, security and authentication, scalability, high availability, replication, transactions, group communications, distributed storage systems.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 431"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": "Permission of instructor may be required",
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "735",
+      "course_id": "COMP 735",
+      "course_name": "Distributed and Concurrent Algorithms.",
+      "credits": "3",
+      "description": "Verification of concurrent systems. Synchronization; mutual exclusion and related problems, barriers, rendezvous, nonblocking algorithms. Fault tolerance: consensus, Byzantine agreement, self-stabilization. Broadcast algorithms. Termination and deadlock detection. Clock synchronization.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 530"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "737",
+      "course_id": "COMP 737",
+      "course_name": "Real-Time Systems.",
+      "credits": "3",
+      "description": "Taxonomy and evolution of real-time systems. Timing constraints. Design, implementation, and analysis of real-time systems. Theory of deterministic scheduling and resource allocation. Case studies and project.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 530"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "740",
+      "course_id": "COMP 740",
+      "course_name": "Computer Architecture and Implementation.",
+      "credits": "3",
+      "description": "Architecture and implementation of modern single-processor computer systems. Performance measurement. Instruction set design. Pipelining. Instruction-level parallelism. Memory hierarchy. I/O system. Floating-point arithmetic. Case studies. Practicum.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 411"
+          ],
+          [
+            "PHYS 352"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "750",
+      "course_id": "COMP 750",
+      "course_name": "Algorithm Analysis.",
+      "credits": "3",
+      "description": "Algorithm complexity. Lower bounds. The classes P, NP, PSPACE, and co-NP; hard and complete problems. Pseudo-polynomial time algorithms. Advanced data structures. Graph-theoretic, number-theoretic, probabilistic, and approximation algorithms.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 455"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "755",
+      "course_id": "COMP 755",
+      "course_name": "Machine Learning.",
+      "credits": "3",
+      "description": "Machine Learning methods are aimed at developing systems that learn from data. The course covers data representations suitable for learning, mathematical underpinnings of the learning methods and practical considerations in their implementations.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "MATH 347"
+          ],
+          [
+            "STOR 435"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {
+        "MATH 347": "C",
+        "STOR 435": "C"
+      },
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "763",
+      "course_id": "COMP 763",
+      "course_name": "Semantics and Program Correctness.",
+      "credits": "3",
+      "description": "Formal characterization of programs. Denotational semantics and fixed-point theories. Proof of program correctness and termination. Algebraic theories of abstract data types. Selected topics in the formalization of concurrent computation.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 724"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "766",
+      "course_id": "COMP 766",
+      "course_name": "Visual Solid Shape.",
+      "credits": "3",
+      "description": "3D differential geometry; local and global shape properties; visual aspects of surface shape. Taught largely through models and figures. Applicable to graphics, computer vision, human vision, and biology.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "MATH 233"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "770",
+      "course_id": "COMP 770",
+      "course_name": "Computer Graphics.",
+      "credits": "3",
+      "description": "Study of graphics hardware, software, and applications. Data structures, graphics, languages, curve surface and solid representations, mapping, ray tracing and radiosity.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 665"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "775",
+      "course_id": "COMP 775",
+      "course_name": "Image Processing and Analysis.",
+      "credits": "3",
+      "description": "Approaches to analysis of digital images. Scale geometry, statistical pattern recognition, optimization. Segmentation, registration, shape analysis. Applications, software tools.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "MATH 233"
+          ],
+          [
+            "MATH 547"
+          ],
+          [
+            "STOR 435"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "776",
+      "course_id": "COMP 776",
+      "course_name": "Computer Vision in our 3D World.",
+      "credits": "3",
+      "description": "Fundamental problems of computer vision. Projective geometry. Camera models, camera calibration. Shape from stereo, epipolar geometry. Photometric stereo. Optical flow, tracking, motion. Range finders, structured light. Object recognition.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "MATH 566"
+          ],
+          [
+            "COMP 550"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": "Permission of instructor may be required",
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "777",
+      "course_id": "COMP 777",
+      "course_name": "Optimal Estimation in Image Analysis.",
+      "credits": "3",
+      "description": "Formulation and numerical solution of optimization problems in image analysis.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "MATH 233"
+          ],
+          [
+            "MATH 347"
+          ],
+          [
+            "MATH 535"
+          ],
+          [
+            "STOR 435"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "781",
+      "course_id": "COMP 781",
+      "course_name": "Robotics.",
+      "credits": "3",
+      "description": "Introduction to the design, programming, and control of robotic systems. Topics include kinematics, dynamics, sensing, actuation, control, robot learning, tele-operation, and motion planning. Applications will be discussed including industrial, mobile, assistive, personal, and medical robots.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 550"
+          ],
+          [
+            "MATH 347"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": "Permission of instructor may be required",
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "782",
+      "course_id": "COMP 782",
+      "course_name": "Motion Planning in Physical and Virtual Worlds.",
+      "credits": "3",
+      "description": "Topics include path planning for autonomous agents, sensor-based planning, localization and mapping, navigation, learning from demonstration, motion planning with dynamic constraints, and planning motion of deformable bodies. Applications to robots and characters in physical and virtual worlds will be discussed.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 550"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": "Permission of instructor may be required",
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "786",
+      "course_id": "COMP 786",
+      "course_name": "Natural Language Processing.",
+      "credits": "3",
+      "description": "Artificial intelligence and machine learning field to build automatic models that can analyze, understand, and generate text. Topics include syntactic parsing, co-reference resolution, semantic parsing, question answering, document summarization, machine translation, dialogue models, and multi-modality.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 562"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "790",
+      "course_id": "COMP 790",
+      "course_name": "Topics in Computer Science.",
+      "credits": "3",
+      "description": "Permission of the instructor. This course has variable content and may be taken multiple times for credit.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "822",
+      "course_id": "COMP 822",
+      "course_name": "Topics in Discrete Optimization.",
+      "credits": "3",
+      "description": "Topics may include polynomial algorithms, computational complexity, matching and matroid problems, and the traveling salesman problem.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "STOR 712"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": "Permission of instructor may be required",
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "832",
+      "course_id": "COMP 832",
+      "course_name": "Multimedia Networking.",
+      "credits": "3",
+      "description": "Audio/video coding and compression techniques and standards. Media streaming and adaptation. Multicast routing, congestion, and error control. Internet protocols RSVP, RTP/RTCP. Integrated and differentiated services architecture for the Internet.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 431"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "872",
+      "course_id": "COMP 872",
+      "course_name": "Exploring Virtual Worlds.",
+      "credits": "3",
+      "description": "Project course, lecture, and seminar on real-time interactive 3D graphics systems in which the user is 'immersed' in and interacts with a simulated 3D environment. Hardware, modeling, applications, multi-user systems.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 870"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "875",
+      "course_id": "COMP 875",
+      "course_name": "Recent Advances in Image Analysis.",
+      "credits": "3",
+      "description": "Lecture and seminar on recent advances in image segmentation, registration, pattern recognition, display, restoration, and enhancement.",
+      "requisites": {
+        "prerequisites": [
+          [
+            "COMP 775"
+          ]
+        ],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "892",
+      "course_id": "COMP 892",
+      "course_name": "Practicum.",
+      "credits": "0.5",
+      "description": "Permission of the instructor. Work experience in an area of computer science relevant to the student's research interests and pre-approved by the instructor. The grade, pass or fail only, will depend on a written report by the student and on a written evaluation by the employer.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "910",
+      "course_id": "COMP 910",
+      "course_name": "Computer Science Module.",
+      "credits": "0.5-21",
+      "description": "A variable-credit module course that can be used to configure a registration for a portion of a class.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "915",
+      "course_id": "COMP 915",
+      "course_name": "Technical Communication in Computer Science.",
+      "credits": "3",
+      "description": "This course for doctoral students covers aspects of written and oral technical communication in computer science, including public speaking, writing, posters, and social networking.  The course frames all communication as a teaching exercise, and includes a short lesson and peer critiques of the lesson.  The course also introduces students to the business and administrative aspects of building a teaching or research career, as well as how to navigate common interpersonal and organizational challenges in research.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "990",
+      "course_id": "COMP 990",
+      "course_name": "Research Seminar in Computer Science.",
+      "credits": "1-21",
+      "description": "Permission of the instructor. Seminars in various topics offered by members of the faculty.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "991",
+      "course_id": "COMP 991",
+      "course_name": "Reading and Research.",
+      "credits": "1-21",
+      "description": "Permission of the instructor. Directed reading and research in selected advanced topics.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": "Letter grade."
+    },
+    {
+      "department": "COMP",
+      "course_number": "992",
+      "course_id": "COMP 992",
+      "course_name": "Master's (Non-Thesis).",
+      "credits": "3",
+      "description": "Permission of the department.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": null
+    },
+    {
+      "department": "COMP",
+      "course_number": "993",
+      "course_id": "COMP 993",
+      "course_name": "Master's Research and Thesis.",
+      "credits": "3",
+      "description": "Permission of the department.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": null
+    },
+    {
+      "department": "COMP",
+      "course_number": "994",
+      "course_id": "COMP 994",
+      "course_name": "Doctoral Research and Dissertation.",
+      "credits": "3",
+      "description": "Permission of the department.",
+      "requisites": {
+        "prerequisites": [],
+        "corequisites": []
+      },
+      "grade_requirements": {},
+      "requisites_note": null,
+      "gen_ed": null,
+      "grading_status": null
+    }
+  ]
+}
