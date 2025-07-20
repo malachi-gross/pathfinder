@@ -1,0 +1,316 @@
+[
+  {
+    "program_type": "minor",
+    "degree_type": null,
+    "total_hours": 14,
+    "requirements": {
+      "Core Requirements": [
+        {
+          "code": "AERO 101",
+          "title": "Heritage and Values of the United States Air Force"
+        },
+        {
+          "code": "AERO 102",
+          "title": "Heritage and Values of the United States Air Force"
+        },
+        {
+          "code": "AERO 201",
+          "title": "Team and Air Force Leadership Fundamentals"
+        },
+        {
+          "code": "AERO 202",
+          "title": "Team and Air Force Leadership Fundamentals II"
+        },
+        {
+          "code": "AERO 301",
+          "title": "Leading People and Effective Communication I"
+        },
+        {
+          "code": "AERO 302",
+          "title": "Leading People and Effective Communication II"
+        },
+        {
+          "code": "AERO 393",
+          "title": "Air and Space Expeditionary Training"
+        },
+        {
+          "code": "AERO 401",
+          "title": "National Security Affairs and Preparation for Active Duty"
+        },
+        {
+          "code": "AERO 402",
+          "title": "National Security Affairs and Preparation for Active Duty"
+        },
+        {
+          "code": "AERO/HIST/PWAD 213",
+          "title": "Air Power and Modern Warfare"
+        }
+      ]
+    },
+    "footnotes": [
+      "take at least nine hours of their minor \"core\" requirements at UNC–Chapel Hill",
+      "earn a minimum cumulative GPA of 2.000 in the minor core requirements. Some programs may require higher standards for minor or specific courses."
+    ],
+    "special_notes": "For more information, please consult the degree requirements section of the catalog.",
+    "program_name": "Aerospace Studies Minor",
+    "program_id": "aerospace-studies-minor",
+    "url": "https://catalog.unc.edu/undergraduate/programs-study/aerospace-studies-minor/#requirementstext"
+  },
+  {
+    "program_type": "Minor",
+    "degree_type": null,
+    "total_hours": 15,
+    "requirements": {
+      "Core Requirements": [
+        {
+          "course": "AAAD 130",
+          "title": "Introduction to African American and Diaspora Studies",
+          "hours": 3
+        },
+        {
+          "description": "Four additional AAAD courses at or above the 100 level whose last two digits are from 30 to 84. In addition students may substitute a course from the following list of courses outside that range:",
+          "hours": 12
+        },
+        {
+          "course": "AAAD 286",
+          "title": "The African Diaspora in the Colonial Americas, 1450-1800",
+          "hours": null
+        },
+        {
+          "course": "AAAD 287",
+          "title": "Health Equity in the African Diaspora",
+          "hours": null
+        },
+        {
+          "course": "AAAD 298",
+          "title": "Blacks in British North America to 1833",
+          "hours": null
+        },
+        {
+          "course": "AAAD 385",
+          "title": "Emancipation in the New World",
+          "hours": null
+        },
+        {
+          "course": "AAAD 388",
+          "title": "Black Feminist Thought & the Speculative Imagination",
+          "hours": null
+        },
+        {
+          "course": "AAAD 389",
+          "title": "The Caribbean Anticolonial: Caribbean Literature, Film, Aesthetics, and Politics",
+          "hours": null
+        },
+        {
+          "course": "AAAD 391",
+          "title": "Human Development, Sustainability and Rights in Africa and the African Diaspora",
+          "hours": null
+        },
+        {
+          "course": "AAAD 392",
+          "title": "Struggles to Shape the City",
+          "hours": null
+        },
+        {
+          "course": "AAAD 485",
+          "title": "Transnational Black Feminist Thought and Practice",
+          "hours": null
+        },
+        {
+          "course": "AAAD 491",
+          "title": "Class, Race, and Inequality in America",
+          "hours": null
+        },
+        {
+          "course": "AAAD 492",
+          "title": "Urbanism in the Global South",
+          "hours": null
+        }
+      ]
+    },
+    "footnotes": [],
+    "special_notes": "In addition to the program requirements listed below, students must: take at least nine hours of their minor \"core\" requirements at UNC–Chapel Hill, earn a minimum cumulative GPA of 2.000 in the minor core requirements. Some programs may require higher standards for minor or specific courses.",
+    "program_name": "African American and Diaspora Studies Minor",
+    "program_id": "african-american-diaspora-studies-minor",
+    "url": "https://catalog.unc.edu/undergraduate/programs-study/african-american-diaspora-studies-minor/#requirementstext"
+  },
+  {
+    "program_type": "minor",
+    "degree_type": "undergraduate",
+    "total_hours": 15,
+    "requirements": {
+      "Core Requirements": [
+        {
+          "code": "AAAD 101",
+          "title": "Introduction to Africa",
+          "hours": 3
+        },
+        {
+          "description": "Four additional AAAD courses at or above the 100 level whose last two digits are from 00 to 29.  In addition students may substitute a course from the following list of courses outside that range:",
+          "hours": 12,
+          "courses": [
+            {
+              "code": "AAAD 288",
+              "title": "Global Black Popular Cultures"
+            },
+            {
+              "code": "AAAD 391",
+              "title": "Human Development, Sustainability and Rights in Africa and the African Diaspora"
+            },
+            {
+              "code": "AAAD 392",
+              "title": "Struggles to Shape the City"
+            },
+            {
+              "code": "AAAD 492",
+              "title": "Urbanism in the Global South"
+            },
+            {
+              "code": "LGLA 404",
+              "title": "Intermediate Lingala IV"
+            },
+            {
+              "code": "SWAH 404",
+              "title": "Intermediate Kiswahili IV"
+            },
+            {
+              "code": "SWAH 405",
+              "title": "Advanced Kiswahili V"
+            },
+            {
+              "code": "SWAH 406",
+              "title": "Advanced Plus Kiswahili VI"
+            },
+            {
+              "code": "WOLO 404",
+              "title": "Intermediate Wolof IV"
+            }
+          ]
+        }
+      ]
+    },
+    "footnotes": [
+      "take at least nine hours of their minor \"core\" requirements at UNC–Chapel Hill",
+      "earn a minimum cumulative GPA of 2.000 in the minor core requirements. Some programs may require higher standards for minor or specific courses."
+    ],
+    "special_notes": "For more information, please consult the degree requirements section of the catalog.",
+    "program_name": "African Studies Minor",
+    "program_id": "african-studies-minor",
+    "url": "https://catalog.unc.edu/undergraduate/programs-study/african-studies-minor/#requirementstext"
+  },
+  {
+    "program_type": "Major",
+    "degree_type": null,
+    "total_hours": 27,
+    "requirements": {
+      "core_requirements": [
+        {
+          "code": "AAAD 101",
+          "name": "Introduction to Africa",
+          "hours": 3
+        },
+        {
+          "code": "AAAD 130",
+          "name": "Introduction to African American and Diaspora Studies",
+          "hours": 3
+        },
+        {
+          "code": "AAAD 395",
+          "name": "Undergraduate Research Seminar (offered fall semester only)",
+          "hours": 3
+        },
+        {
+          "code": "AAAD 487",
+          "name": "Intellectual Currents in African and African Diaspora Studies (offered spring semester only)",
+          "hours": 3
+        },
+        {
+          "name": "Five additional AAAD courses.",
+          "hours": 15
+        }
+      ]
+    },
+    "footnotes": [
+      "First-year seminars do not count toward the major."
+    ],
+    "special_notes": "Three semesters of one African language (either to fulfill the global language Gen Ed requirement or in addition to it) are recommended for the African, African American and Diaspora Studies Major. The following African language courses currently are offered:",
+    "program_name": "African, African American, and Diaspora Studies Major, B.A.",
+    "program_id": "african-african-american-diaspora-studies-major-ba",
+    "url": "https://catalog.unc.edu/undergraduate/programs-study/african-african-american-diaspora-studies-major-ba/#requirementstext"
+  },
+  {
+    "program_type": "minor",
+    "degree_type": null,
+    "total_hours": 15,
+    "requirements": {
+      "core": [
+        {
+          "course": "AMST/HIST 110",
+          "title": "Introduction to the Cultures and Histories of Native North America",
+          "hours": 3
+        }
+      ],
+      "electives": [
+        {
+          "description": "Select four additional courses from the list below",
+          "hours": 12
+        }
+      ],
+      "elective_courses": [
+        "AMST FYS",
+        "AMST/ANTH 203",
+        "AMST/HIST 231",
+        "AMST/HIST 233",
+        "AMST/ANTH/HIST 234",
+        "AMST/HIST 235",
+        "AMST 246",
+        "AMST 336",
+        "AMST 337",
+        "AMST 338",
+        "AMST 339",
+        "AMST 340",
+        "AMST 341",
+        "AMST 345",
+        "AMST 439",
+        "AMST 510",
+        "AMST 511",
+        "ANTH 121",
+        "ANTH 206",
+        "ANTH 231",
+        "ANTH 232",
+        "ANTH 250",
+        "ANTH 252",
+        "ANTH 406",
+        "ANTH 451",
+        "ANTH 550",
+        "ARTH 160",
+        "CHER 101",
+        "CHER 102",
+        "CHER 203",
+        "CHER 204",
+        "HIST 142",
+        "HIST 145",
+        "HIST 240",
+        "HIST 315",
+        "HIST 526",
+        "HIST/WGST 576",
+        "LING 558",
+        "LING 560",
+        "LING 561",
+        "MAYA 401",
+        "RELI 448",
+        "SPAN 344",
+        "SPAN 374",
+        "SPAN 625",
+        "SPAN 683"
+      ]
+    },
+    "footnotes": [
+      "With permission of the Director of Undergraduate Studies, one AMST First-Year Seminar course with relevant American Indian and Indigenous Studies (AIIS) content can count as an elective for the minor."
+    ],
+    "special_notes": null,
+    "program_name": "American Indian and Indigenous Studies Minor",
+    "program_id": "american-indian-indigenous-studies-minor",
+    "url": "https://catalog.unc.edu/undergraduate/programs-study/american-indian-indigenous-studies-minor/#requirementstext"
+  }
+]
