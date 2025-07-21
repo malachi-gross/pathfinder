@@ -44,3 +44,25 @@ export const courseApi = {
     return data;
   },
 };
+
+export const programApi = {
+  // Get all programs
+  getPrograms: async (programType?: string): Promise<Program[]> => {
+    const { data } = await api.get('/api/programs', {
+      params: programType ? { program_type: programType } : undefined,
+    });
+    return data;
+  },
+
+  // Get a single program
+  getProgram: async (programId: string): Promise<Program> => {
+    const { data } = await api.get(`/api/programs/${programId}`);
+    return data;
+  },
+
+  // Get program requirements
+  getProgramRequirements: async (programId: string): Promise<ProgramRequirements> => {
+    const { data } = await api.get(`/api/programs/${programId}/requirements`);
+    return data;
+  },
+};

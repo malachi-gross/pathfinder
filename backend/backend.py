@@ -50,7 +50,27 @@ class PrerequisiteGroup(BaseModel):
     courses: List[dict]
     is_corequisite: bool
 
+class Program(BaseModel):
+    program_id: str
+    name: str
+    program_type: str
+    degree_type: Optional[str]
+    total_hours: Optional[int]
+    url: Optional[str]
+
+class ProgramRequirement(BaseModel):
+    id: int
+    requirement_type: str
+    category_name: Optional[str]
+    min_credits: Optional[int]
+    min_courses: Optional[int]
+    selection_notes: Optional[str]
+    level_requirement: Optional[str]
+    other_restrictions: Optional[str]
+    courses: Optional[List[dict]]
+
 # API Endpoints
+## Course Endpoints
 @app.get("/")
 def read_root():
     return {"message": "UNC Course API", "version": "1.0"}
@@ -154,6 +174,90 @@ def get_department_courses(dept_code: str):
                 raise HTTPException(status_code=404, detail=f"No courses found for department {dept_code}")
             
             return courses
+
+## Program Endpoints
+@app.get("/api/programs")
+def get_programs(program_type: Optional[str] = None):
+    with get_db_connection() as conn:
+        with conn.cursor(cursor_factory=RealDictCursor) as cur:
+            query = """
+                SELECT * FROM programs
+                WHERE 1=1
+            """
+            params = []
+            
+            if program_type:
+                query += " AND program_type = %s"
+                params.append(program_type)
+            
+            query += " ORDER BY name"
+            
+            cur.execute(query, params)
+            return cur.fetchall()
+
+@app.get("/api/programs/{program_id}")
+def get_program(program_id: str):
+    with get_db_connection() as conn:
+        with conn.cursor(cursor_factory=RealDictCursor) as cur:
+            # Get program details
+            cur.execute("""
+                SELECT * FROM programs WHERE program_id = %s
+            """, (program_id,))
+            
+            program = cur.fetchone()
+            if not program:
+                raise HTTPException(status_code=404, detail="Program not found")
+            
+            return program
+
+@app.get("/api/programs/{program_id}/requirements")
+def get_program_requirements(program_id: str):
+    with get_db_connection() as conn:
+        with conn.cursor(cursor_factory=RealDictCursor) as cur:
+            # Get program ID
+            cur.execute("SELECT id FROM programs WHERE program_id = %s", (program_id,))
+            program = cur.fetchone()
+            if not program:
+                raise HTTPException(status_code=404, detail="Program not found")
+            
+            # Get requirements with courses
+            cur.execute("""
+                SELECT 
+                    pr.*,
+                    COALESCE(
+                        json_agg(
+                            json_build_object(
+                                'course_id', c.course_id,
+                                'name', c.name,
+                                'credits', c.credits,
+                                'is_required', prc.is_required
+                            ) ORDER BY c.course_id
+                        ) FILTER (WHERE c.id IS NOT NULL),
+                        '[]'::json
+                    ) as courses
+                FROM program_requirements pr
+                LEFT JOIN program_requirement_courses prc ON pr.id = prc.requirement_id
+                LEFT JOIN courses c ON prc.course_id = c.id
+                WHERE pr.program_id = %s
+                GROUP BY pr.id
+                ORDER BY pr.display_order, pr.requirement_type
+            """, (program['id'],))
+            
+            requirements = cur.fetchall()
+            
+            # Group by requirement type
+            grouped = {}
+            for req in requirements:
+                req_type = req['requirement_type']
+                if req_type not in grouped:
+                    grouped[req_type] = []
+                grouped[req_type].append(req)
+            
+            return {
+                "program_id": program_id,
+                "requirements_by_type": grouped,
+                "all_requirements": requirements
+            }
 
 if __name__ == "__main__":
     import uvicorn
