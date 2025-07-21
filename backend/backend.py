@@ -69,11 +69,59 @@ class ProgramRequirement(BaseModel):
     other_restrictions: Optional[str]
     courses: Optional[List[dict]]
 
+class PrerequisiteCheckRequest(BaseModel):
+    course_id: str
+    completed_courses: List[str]
+
+class PrerequisiteCheckResponse(BaseModel):
+    course_id: str
+    can_take: bool
+    missing_prerequisites: List[str]
+    warnings: List[str]
+
 # API Endpoints
 ## Course Endpoints
 @app.get("/")
 def read_root():
     return {"message": "UNC Course API", "version": "1.0"}
+
+@app.get("/api/courses/search")
+def search_courses(q: str, limit: int = 20):
+    if not q or len(q) < 1:
+        return []
+    
+    with get_db_connection() as conn:
+        with conn.cursor(cursor_factory=RealDictCursor) as cur:
+            # Use the full-text search that we know works
+            cur.execute("""
+                SELECT c.*, d.code as department_code
+                FROM courses c
+                JOIN departments d ON c.department_id = d.id
+                WHERE c.search_vector @@ plainto_tsquery('english', %s)
+                ORDER BY ts_rank(c.search_vector, plainto_tsquery('english', %s)) DESC
+                LIMIT %s
+            """, (q, q, limit))
+            
+            results = cur.fetchall()
+            
+            # If no results with full-text, try simple ILIKE as fallback
+            if not results:
+                search_pattern = f"%{q}%"
+                cur.execute("""
+                    SELECT c.*, d.code as department_code
+                    FROM courses c
+                    JOIN departments d ON c.department_id = d.id
+                    WHERE 
+                        c.course_id ILIKE %s OR 
+                        c.name ILIKE %s OR 
+                        d.code ILIKE %s
+                    ORDER BY c.course_id
+                    LIMIT %s
+                """, (search_pattern, search_pattern, search_pattern, limit))
+                
+                results = cur.fetchall()
+            
+            return results if results else []
 
 @app.get("/api/courses/{course_id}", response_model=Course)
 def get_course(course_id: str):
@@ -127,21 +175,6 @@ def get_prerequisites(course_id: str):
                 "prerequisite_groups": [g for g in groups if not g['is_corequisite']],
                 "corequisite_groups": [g for g in groups if g['is_corequisite']]
             }
-
-@app.get("/api/courses/search")
-def search_courses(q: str, limit: int = 20):
-    with get_db_connection() as conn:
-        with conn.cursor(cursor_factory=RealDictCursor) as cur:
-            cur.execute("""
-                SELECT c.*, d.code as department_code
-                FROM courses c
-                JOIN departments d ON c.department_id = d.id
-                WHERE c.search_vector @@ plainto_tsquery('english', %s)
-                ORDER BY ts_rank(c.search_vector, plainto_tsquery('english', %s)) DESC
-                LIMIT %s
-            """, (q, q, limit))
-            
-            return cur.fetchall()
 
 @app.get("/api/departments")
 def get_departments():
@@ -258,6 +291,90 @@ def get_program_requirements(program_id: str):
                 "requirements_by_type": grouped,
                 "all_requirements": requirements
             }
+
+## Planning Endpoints
+@app.post("/api/planner/check-prerequisites", response_model=PrerequisiteCheckResponse)
+def check_prerequisites(request: PrerequisiteCheckRequest):
+    with get_db_connection() as conn:
+        with conn.cursor(cursor_factory=RealDictCursor) as cur:
+            # Get course ID from database
+            cur.execute("SELECT id FROM courses WHERE course_id = %s", (request.course_id,))
+            course = cur.fetchone()
+            
+            if not course:
+                raise HTTPException(status_code=404, detail="Course not found")
+            
+            # Get prerequisites for the course
+            cur.execute("""
+                SELECT 
+                    p.prereq_group,
+                    array_agg(pc.course_id) as required_courses
+                FROM prerequisites p
+                JOIN courses pc ON p.prereq_course_id = pc.id
+                WHERE p.course_id = %s AND NOT p.is_corequisite
+                GROUP BY p.prereq_group
+                ORDER BY p.prereq_group
+            """, (course['id'],))
+            
+            prereq_groups = cur.fetchall()
+            
+            # Check if prerequisites are met
+            can_take = True
+            missing_prerequisites = []
+            warnings = []
+            
+            # For each AND group
+            for group in prereq_groups:
+                # Check if at least one course in the OR group is completed
+                group_satisfied = False
+                for req_course in group['required_courses']:
+                    if req_course in request.completed_courses:
+                        group_satisfied = True
+                        break
+                
+                if not group_satisfied:
+                    can_take = False
+                    missing_prerequisites.extend(group['required_courses'])
+            
+            # Remove duplicates from missing prerequisites
+            missing_prerequisites = list(set(missing_prerequisites))
+            
+            # Add warnings for edge cases
+            if not prereq_groups:
+                warnings.append("No prerequisites found for this course")
+            
+            return PrerequisiteCheckResponse(
+                course_id=request.course_id,
+                can_take=can_take,
+                missing_prerequisites=missing_prerequisites,
+                warnings=warnings
+            )
+
+@app.post("/api/planner/validate-semester")
+def validate_semester(semester_courses: List[str], completed_courses: List[str]):
+    """Validate all courses in a semester for prerequisites and corequisites"""
+    validation_results = []
+    
+    for course_id in semester_courses:
+        # Check prerequisites (excluding courses in the same semester)
+        prereq_check = check_prerequisites(
+            PrerequisiteCheckRequest(
+                course_id=course_id,
+                completed_courses=completed_courses
+            )
+        )
+        
+        validation_results.append({
+            "course_id": course_id,
+            "valid": prereq_check.can_take,
+            "issues": prereq_check.missing_prerequisites,
+            "warnings": prereq_check.warnings
+        })
+    
+    return {
+        "semester_valid": all(r["valid"] for r in validation_results),
+        "course_validations": validation_results
+    }
 
 if __name__ == "__main__":
     import uvicorn
