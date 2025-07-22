@@ -24,7 +24,7 @@ app.add_middleware(
 def get_db_connection():
     database_url = os.getenv('DATABASE_URL')
     url = urlparse(database_url)
-    
+    print(f"Connecting to database at {url.hostname}:{url.port}/{url.path[1:]} as user {url.username}")
     conn_params = {
         "host": url.hostname,
         "port": url.port,
