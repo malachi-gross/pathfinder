@@ -11,8 +11,12 @@ load_dotenv()
 class CourseDatabase:
     def __init__(self, db_url: str = None):
         """Initialize database connection."""
-        self.db_url = db_url or os.getenv('DATABASE_URL')
-        url = urlparse(db_url)
+        self.db_url = os.getenv('DATABASE_URL')
+
+        if not self.db_url:
+            raise ValueError("Database URL must be provided via db_url param or DATABASE_URL env var")
+
+        url = urlparse(self.db_url)
         
         conn_params = {
             "host": url.hostname,
@@ -308,7 +312,7 @@ class CourseDatabase:
         return paths
 
 # Example usage and verification script
-def verify_migration():
+def verify_scraping():
     """Verify the migration was successful."""
     with CourseDatabase() as db:
         print("🔍 Database Statistics:")
@@ -348,4 +352,4 @@ def verify_migration():
             print(f"     Has {len(requirements)} requirement categories")
 
 if __name__ == "__main__":
-    verify_migration()
+    verify_scraping()
