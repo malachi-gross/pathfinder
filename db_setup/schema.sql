@@ -3,7 +3,7 @@
 
 -- Enable required extensions
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
--- CREATE EXTENSION IF NOT EXISTS "pgvector";
+CREATE EXTENSION IF NOT EXISTS "pgvector";
 
 -- Departments table
 CREATE TABLE departments (
@@ -23,11 +23,10 @@ CREATE TABLE courses (
     name TEXT NOT NULL,
     description TEXT,
     credits VARCHAR(10), -- Some are ranges like '3-6'
-    gen_ed TEXT[],
     grading_status TEXT,
+    requisites_note TEXT, -- For "permission of instructor", "may be repeated", etc.
     -- For semantic search
-    -- TODO: embedding vector(1536),
-    embedding TEXT,
+    embedding vector(1536),
     search_vector tsvector,
     created_at TIMESTAMP DEFAULT NOW(),
     updated_at TIMESTAMP DEFAULT NOW()
@@ -38,11 +37,11 @@ CREATE INDEX idx_course_id ON courses(course_id);
 CREATE INDEX idx_course_dept ON courses(department_id);
 CREATE INDEX idx_course_number ON courses(course_number);
 CREATE INDEX idx_course_search ON courses USING GIN(search_vector);
--- CREATE INDEX idx_course_embedding ON courses USING ivfflat (embedding vector_cosine_ops);
+CREATE INDEX idx_course_embedding ON courses USING ivfflat (embedding vector_cosine_ops);
 
 -- Update search vector automatically
 CREATE OR REPLACE FUNCTION update_course_search_vector()
-RETURNS trigger AS $$
+RETURNS trigger AS $
 BEGIN
     NEW.search_vector := 
         setweight(to_tsvector('english', COALESCE(NEW.course_id, '')), 'A') ||
@@ -50,12 +49,25 @@ BEGIN
         setweight(to_tsvector('english', COALESCE(NEW.description, '')), 'C');
     RETURN NEW;
 END;
-$$ LANGUAGE plpgsql;
+$ LANGUAGE plpgsql;
 
 CREATE TRIGGER update_course_search_vector_trigger
 BEFORE INSERT OR UPDATE ON courses
 FOR EACH ROW
 EXECUTE FUNCTION update_course_search_vector();
+
+-- Gen Ed Fulfillments table (NEW)
+CREATE TABLE gen_ed_fulfillments (
+    id SERIAL PRIMARY KEY,
+    course_id INTEGER REFERENCES courses(id) ON DELETE CASCADE,
+    gen_ed_code VARCHAR(20) NOT NULL, -- 'FY-SEMINAR', 'FC-PAST', etc.
+    requirement_group INTEGER DEFAULT 0, -- For AND groups (same group = OR options)
+    created_at TIMESTAMP DEFAULT NOW(),
+    UNIQUE(course_id, gen_ed_code)
+);
+
+CREATE INDEX idx_gen_ed_code ON gen_ed_fulfillments(gen_ed_code);
+CREATE INDEX idx_gen_ed_course ON gen_ed_fulfillments(course_id);
 
 -- Prerequisites table (many-to-many with grouping)
 CREATE TABLE prerequisites (
@@ -172,28 +184,41 @@ CREATE TABLE schedule_courses (
 );
 
 -- Create views for common queries
--- CREATE OR REPLACE VIEW course_prerequisites AS
--- SELECT 
---     c.course_id,
---     c.name,
---     array_agg(
---         DISTINCT jsonb_build_object(
---             'group', p.prereq_group,
---             'course_id', pc.course_id,
---             'course_name', pc.name,
---             'is_corequisite', p.is_corequisite
---         )
---     ) AS prerequisites
--- FROM courses c
--- LEFT JOIN prerequisites p ON c.id = p.course_id
--- LEFT JOIN courses pc ON p.prereq_course_id = pc.id
--- GROUP BY c.id, c.course_id, c.name;
+CREATE OR REPLACE VIEW course_prerequisites AS
+SELECT 
+    c.course_id,
+    c.name,
+    array_agg(
+        DISTINCT jsonb_build_object(
+            'group', p.prereq_group,
+            'course_id', pc.course_id,
+            'course_name', pc.name,
+            'is_corequisite', p.is_corequisite
+        )
+    ) AS prerequisites
+FROM courses c
+LEFT JOIN prerequisites p ON c.id = p.course_id
+LEFT JOIN courses pc ON p.prereq_course_id = pc.id
+GROUP BY c.id, c.course_id, c.name;
+
+-- View for gen ed courses (NEW)
+CREATE OR REPLACE VIEW gen_ed_courses AS
+SELECT 
+    g.gen_ed_code,
+    c.course_id,
+    c.name,
+    c.credits,
+    c.department_id,
+    g.requirement_group
+FROM gen_ed_fulfillments g
+JOIN courses c ON g.course_id = c.id
+ORDER BY g.gen_ed_code, g.requirement_group, c.course_id;
 
 -- Function to check if prerequisites are met
 CREATE OR REPLACE FUNCTION check_prerequisites_met(
     p_student_id UUID,
     p_course_id INTEGER
-) RETURNS BOOLEAN AS $$
+) RETURNS BOOLEAN AS $
 DECLARE
     prereq_group RECORD;
     group_met BOOLEAN;
@@ -223,16 +248,16 @@ BEGIN
     
     RETURN TRUE;
 END;
-$$ LANGUAGE plpgsql;
+$ LANGUAGE plpgsql;
 
 -- Add updated_at triggers
 CREATE OR REPLACE FUNCTION update_updated_at_column()
-RETURNS TRIGGER AS $$
+RETURNS TRIGGER AS $
 BEGIN
     NEW.updated_at = NOW();
     RETURN NEW;
 END;
-$$ language 'plpgsql';
+$ language 'plpgsql';
 
 CREATE TRIGGER update_courses_updated_at BEFORE UPDATE ON courses
 FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
