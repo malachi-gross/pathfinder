@@ -8,6 +8,7 @@ import { courseApi } from '@/lib/api';
 import { CourseCard } from '@/app/components/CourseCard';
 import { CourseSearch } from '@/app/components/CourseSearch';
 import { Loader2 } from 'lucide-react';
+import { Course, Department } from '@/types/course';
 
 export default function CoursesPage() {
   const searchParams = useSearchParams();
@@ -21,7 +22,7 @@ export default function CoursesPage() {
 
   const { data: deptCourses, isLoading: coursesLoading } = useQuery({
     queryKey: ['courses', 'department', selectedDept],
-    queryFn: () => courseApi.getDepartmentCourses(selectedDept),
+    queryFn: async () => courseApi.getByDepartment(selectedDept),
     enabled: !!selectedDept,
   });
 
@@ -35,21 +36,19 @@ export default function CoursesPage() {
           <div className="space-y-1">
             <button
               onClick={() => setSelectedDept('')}
-              className={`w-full text-left px-3 py-2 rounded hover:bg-gray-100 ${
-                !selectedDept ? 'bg-blue-50 text-blue-700' : 'text-gray-700'
-              }`}
+              className={`w-full text-left px-3 py-2 rounded hover:bg-gray-100 ${!selectedDept ? 'bg-blue-50 text-blue-700' : 'text-gray-700'
+                }`}
             >
               All Departments
             </button>
-            {departments?.map((dept) => (
+            {departments?.map((dept: Department) => (
               <button
                 key={dept.code}
                 onClick={() => setSelectedDept(dept.code)}
-                className={`w-full text-left px-3 py-2 rounded hover:bg-gray-100 ${
-                  selectedDept === dept.code
-                    ? 'bg-blue-50 text-blue-700'
-                    : 'text-gray-700'
-                }`}
+                className={`w-full text-left px-3 py-2 rounded hover:bg-gray-100 ${selectedDept === dept.code
+                  ? 'bg-blue-50 text-blue-700'
+                  : 'text-gray-700'
+                  }`}
               >
                 {dept.code} ({dept.course_count})
               </button>
@@ -74,7 +73,7 @@ export default function CoursesPage() {
                 </div>
               ) : (
                 <div className="grid gap-4">
-                  {deptCourses?.map((course) => (
+                  {deptCourses?.map((course: Course) => (
                     <CourseCard key={course.course_id} course={course} />
                   ))}
                 </div>

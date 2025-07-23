@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { courseApi } from '@/lib/api';
 import { PrerequisiteTree } from '@/app/components/PrerequisiteTree';
 import { formatCredits } from '@/lib/utils';
+import { GenEdRequirement } from '@/types/requirements';
 
 export default function CourseDetailPage() {
   const params = useParams();
@@ -15,7 +16,7 @@ export default function CourseDetailPage() {
 
   const { data: course, isLoading: courseLoading } = useQuery({
     queryKey: ['course', courseId],
-    queryFn: () => courseApi.getCourse(courseId),
+    queryFn: () => courseApi.getOne(courseId),
   });
 
   const { data: prerequisites, isLoading: prereqLoading } = useQuery({
@@ -91,19 +92,6 @@ export default function CourseDetailPage() {
               <div className="flex items-center text-gray-600">
                 <GraduationCap className="w-4 h-4 mr-1" />
                 {course.grading_status}
-              </div>
-            )}
-            {course.gen_ed && course.gen_ed.length > 0 && (
-              <div className="flex items-center">
-                <span className="text-gray-600 mr-2">Gen Ed:</span>
-                {course.gen_ed.map((ge) => (
-                  <span
-                    key={ge}
-                    className="px-2 py-1 bg-green-100 text-green-800 rounded text-xs mr-1"
-                  >
-                    {ge}
-                  </span>
-                ))}
               </div>
             )}
           </div>

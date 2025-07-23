@@ -1,68 +1,80 @@
-// lib/api.ts
-import axios from 'axios';
-import { Course, CoursePrerequisites, Department, SearchResult } from '@/types/course';
+import { CoursePrerequisites } from "@/types/course";
+import { ProgramRequirements } from "@/types/program";
 
+// lib/api.ts
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
 
-const api = axios.create({
-  baseURL: API_BASE_URL,
-  headers: {
-    'Content-Type': 'application/json',
+const api = {
+  get: async (url: string) => {
+    const response = await fetch(`${API_BASE_URL}${url}`);
+    if (!response.ok) throw new Error('API request failed');
+    return response.json();
   },
-});
-
-export const courseApi = {
-  // Get a single course
-  getCourse: async (courseId: string): Promise<Course> => {
-    const { data } = await api.get(`/api/courses/${encodeURIComponent(courseId)}`);
-    return data;
-  },
-
-  // Get course prerequisites
-  getPrerequisites: async (courseId: string): Promise<CoursePrerequisites> => {
-    const { data } = await api.get(`/api/courses/${encodeURIComponent(courseId)}/prerequisites`);
-    return data;
-  },
-
-  // Search courses
-  searchCourses: async (query: string, limit: number = 20): Promise<SearchResult[]> => {
-    const { data } = await api.get('/api/courses/search', {
-      params: { q: query, limit },
+  post: async (url: string, data: any) => {
+    const response = await fetch(`${API_BASE_URL}${url}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
     });
-    return data;
-  },
-
-  // Get all departments
-  getDepartments: async (): Promise<Department[]> => {
-    const { data } = await api.get('/api/departments');
-    return data;
-  },
-
-  // Get courses by department
-  getDepartmentCourses: async (deptCode: string): Promise<Course[]> => {
-    const { data } = await api.get(`/api/departments/${deptCode}/courses`);
-    return data;
+    if (!response.ok) throw new Error('API request failed');
+    return response.json();
   },
 };
 
+export const courseApi = {
+  getAll: () => api.get('/api/courses'),
+  getOne: (courseId: string) => api.get(`/api/courses/${courseId}`),
+  searchCourses: (query: string) => api.get(`/api/courses/search?q=${query}&limit=20`),
+  getDepartments: () => api.get('/api/departments'),
+  getByDepartment: (deptCode: string) => api.get(`/api/departments/${deptCode}/courses`),
+  getPrerequisites: (courseId: string) => api.get(`/api/courses/${encodeURIComponent(courseId)}/prerequisites`),
+};
+
 export const programApi = {
-  // Get all programs
-  getPrograms: async (programType?: string): Promise<Program[]> => {
-    const { data } = await api.get('/api/programs', {
-      params: programType ? { program_type: programType } : undefined,
-    });
-    return data;
-  },
+  getAll: () => api.get('/api/programs'),
+  getOne: (programId: string) => api.get(`/api/programs/${programId}`),
+  getProgramRequirements: async (programId: string) => api.get(`/api/programs/${programId}/requirements`),
+  searchPrograms: (query?: string, type?: string) => {
+    const params = new URLSearchParams();
+    if (query) params.append('q', query);
+    if (type && type !== 'all') params.append('type', type);
 
-  // Get a single program
-  getProgram: async (programId: string): Promise<Program> => {
-    const { data } = await api.get(`/api/programs/${programId}`);
-    return data;
+    // Only append ? if there are params
+    const queryString = params.toString();
+    return api.get(`/api/programs${queryString ? `?${queryString}` : ''}`);
   },
+  getProgress: (programId: string, completedCourses: string[]) =>
+    api.post(`/api/programs/${programId}/progress`, { completed_courses: completedCourses }),
+  getByType: (type: string) => api.get(`/api/programs?type=${type}`),
+};
 
-  // Get program requirements
-  getProgramRequirements: async (programId: string): Promise<ProgramRequirements> => {
-    const { data } = await api.get(`/api/programs/${programId}/requirements`);
-    return data;
-  },
+export const genEdApi = {
+  getProgress: (completedCourses: string[]) =>
+    api.post('/api/gen-ed/progress', { completed_courses: completedCourses }),
+  getCoursesByGenEd: (genEdCode: string) =>
+    api.get(`/api/gen-ed/${genEdCode}/courses`),
+};
+
+export const plannerApi = {
+  checkPrerequisites: (courseId: string, completedCourses: string[]) =>
+    api.post('/api/planner/check-prerequisites', {
+      course_id: courseId,
+      completed_courses: completedCourses,
+    }),
+  validateSemester: (semesterCourses: string[], completedCourses: string[]) =>
+    api.post('/api/planner/validate-semester', {
+      semester_courses: semesterCourses,
+      completed_courses: completedCourses,
+    }),
+};
+
+// Helper function to build query strings
+export const buildQueryString = (params: Record<string, any>) => {
+  const searchParams = new URLSearchParams();
+  Object.entries(params).forEach(([key, value]) => {
+    if (value !== undefined && value !== null && value !== '') {
+      searchParams.append(key, value.toString());
+    }
+  });
+  return searchParams.toString();
 };

@@ -3,7 +3,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import psycopg2
 from psycopg2.extras import RealDictCursor
-from typing import List, Optional
+from typing import List, Optional, Dict, Any
 from pydantic import BaseModel
 from dotenv import load_dotenv
 from urllib.parse import urlparse
@@ -78,6 +78,9 @@ class PrerequisiteCheckResponse(BaseModel):
     can_take: bool
     missing_prerequisites: List[str]
     warnings: List[str]
+
+class CourseProgress(BaseModel):
+    completed_courses: List[str]
 
 # API Endpoints
 ## Course Endpoints
@@ -210,31 +213,39 @@ def get_department_courses(dept_code: str):
 
 ## Program Endpoints
 @app.get("/api/programs")
-def get_programs(program_type: Optional[str] = None):
+def search_programs(q: str = "", type: str = None):
+    """Search for programs by name or type."""
     with get_db_connection() as conn:
         with conn.cursor(cursor_factory=RealDictCursor) as cur:
             query = """
-                SELECT * FROM programs
+                SELECT id, program_id, name, program_type, degree_type, total_hours
+                FROM programs
                 WHERE 1=1
             """
             params = []
             
-            if program_type:
-                query += " AND program_type = %s"
-                params.append(program_type)
+            if q:
+                query += " AND name ILIKE %s"
+                params.append(f"%{q}%")
             
-            query += " ORDER BY name"
+            if type and type != 'all':
+                query += " AND program_type = %s"
+                params.append(type)
+            
+            query += " ORDER BY name LIMIT 50"
             
             cur.execute(query, params)
             return cur.fetchall()
 
+# Also make sure you have this endpoint for individual programs
 @app.get("/api/programs/{program_id}")
 def get_program(program_id: str):
+    """Get a specific program by ID."""
     with get_db_connection() as conn:
         with conn.cursor(cursor_factory=RealDictCursor) as cur:
-            # Get program details
             cur.execute("""
-                SELECT * FROM programs WHERE program_id = %s
+                SELECT * FROM programs 
+                WHERE program_id = %s
             """, (program_id,))
             
             program = cur.fetchone()
@@ -242,7 +253,7 @@ def get_program(program_id: str):
                 raise HTTPException(status_code=404, detail="Program not found")
             
             return program
-
+        
 @app.get("/api/programs/{program_id}/requirements")
 def get_program_requirements(program_id: str):
     with get_db_connection() as conn:
@@ -291,6 +302,160 @@ def get_program_requirements(program_id: str):
                 "requirements_by_type": grouped,
                 "all_requirements": requirements
             }
+        
+@app.post("/api/programs/{program_id}/progress")
+def get_program_progress(program_id: str, course_progress: CourseProgress):
+    """Get progress for a specific program given completed courses."""
+    with get_db_connection() as conn:
+        with conn.cursor(cursor_factory=RealDictCursor) as cur:
+            # Get program info
+            cur.execute("""
+                SELECT * FROM programs WHERE program_id = %s
+            """, (program_id,))
+            program = cur.fetchone()
+            
+            if not program:
+                raise HTTPException(status_code=404, detail="Program not found")
+            
+            # Get all requirements for this program
+            cur.execute("""
+                SELECT pr.*, 
+                       array_agg(
+                           json_build_object(
+                               'course_id', c.course_id,
+                               'course_name', c.name,
+                               'credits', c.credits,
+                               'is_required', prc.is_required,
+                               'notes', prc.notes
+                           ) ORDER BY c.course_id
+                       ) as courses
+                FROM program_requirements pr
+                LEFT JOIN program_requirement_courses prc ON pr.id = prc.requirement_id
+                LEFT JOIN courses c ON prc.course_id = c.id
+                WHERE pr.program_id = %s
+                GROUP BY pr.id
+                ORDER BY pr.display_order
+            """, (program['id'],))
+            
+            requirements = cur.fetchall()
+            
+            # Calculate progress for each requirement
+            completed_credits = 0
+            planned_credits = 0
+            
+            for req in requirements:
+                if req['courses']:
+                    for course in req['courses']:
+                        if course['course_id'] in course_progress.completed_courses:
+                            course['is_completed'] = True
+                            completed_credits += int(course['credits'] or 0)
+                        else:
+                            course['is_completed'] = False
+                            # For now, mark as planned if in current schedule
+                            course['is_planned'] = False
+            
+            # Calculate completion percentage
+            total_required = program['total_hours'] or 120
+            completion_percentage = min(100, (completed_credits / total_required) * 100)
+            
+            return {
+                "program": program,
+                "total_required_credits": total_required,
+                "completed_credits": completed_credits,
+                "planned_credits": planned_credits,
+                "requirements": requirements,
+                "completion_percentage": completion_percentage
+            }
+        
+@app.post("/api/gen-ed/progress")
+def get_gen_ed_progress(course_progress: CourseProgress):
+    """Get general education progress given completed courses."""
+    with get_db_connection() as conn:
+        with conn.cursor(cursor_factory=RealDictCursor) as cur:
+            # Define gen ed requirements
+            gen_ed_requirements = [
+                {"code": "FY-THRIVE", "name": "College Thriving", "required": True},
+                {"code": "FY-DATA", "name": "Data Literacy Lab", "required": True},
+                {"code": "FY-SEMINAR", "name": "First Year Seminar", "required": True},
+                {"code": "FY-LAUNCH", "name": "First Year Launch", "required": True},
+                {"code": "FY-WRITING", "name": "English Composition and Rhetoric", "required": True},
+                {"code": "GLBL-LANG", "name": "Global Language", "required": True},
+                {"code": "FC-AESTH", "name": "Focus Capacity: Aesthetic and Interpretive Analysis", "required": True},
+                {"code": "FC-CREATE", "name": "Focus Capacity: Creative Expression, Practice, and Production", "required": True},
+                {"code": "FC-PAST", "name": "Focus Capacity: Engagement with the Human Past", "required": True},
+                {"code": "FC-VALUES", "name": "Focus Capacity: Ethical and Civic Values", "required": True},
+                {"code": "FC-GLOBAL", "name": "Focus Capacity: Global Understanding and Engagement", "required": True},
+                {"code": "FC-NATSCI", "name": "Focus Capacity: Natural Scientific Investigation", "required": True},
+                {"code": "FC-POWER", "name": "Focus Capacity: Power and Society", "required": True},
+                {"code": "FC-QUANT", "name": "Focus Capacity: Quantitative Reasoning", "required": True},
+                {"code": "FC-KNOWING", "name": "Focus Capacity: Ways of Knowing", "required": True},
+                {"code": "FC-LAB", "name": "Focus Capacity: Empirical Investigation Lab", "required": True},
+                {"code": "RESEARCH", "name": "Research and Discovery", "required": True},
+                {"code": "HI-INTERN", "name": "High-Impact Experience", "required": True},
+                {"code": "COMMBEYOND", "name": "Communication Beyond Carolina", "required": True},
+                {"code": "INTERDISCI", "name": "Interdisciplinary", "required": True},
+                {"code": "LIFE-FIT", "name": "Lifetime Fitness", "required": True},
+                {"code": "FAD", "name": "Foundations of American Democracy", "required": True},
+            ]
+            
+            # Get gen ed fulfillments for completed courses
+            if course_progress.completed_courses:
+                placeholders = ','.join(['%s'] * len(course_progress.completed_courses))
+                cur.execute(f"""
+                    SELECT c.course_id, array_agg(DISTINCT g.gen_ed_code) as gen_eds
+                    FROM courses c
+                    JOIN gen_ed_fulfillments g ON c.id = g.course_id
+                    WHERE c.course_id IN ({placeholders})
+                    GROUP BY c.course_id
+                """, course_progress.completed_courses)
+                
+                course_gen_eds = {row['course_id']: row['gen_eds'] for row in cur.fetchall()}
+            else:
+                course_gen_eds = {}
+            
+            # Check each requirement
+            completed_count = 0
+            results = []
+            
+            for req in gen_ed_requirements:
+                fulfilled_courses = []
+                
+                # Check which completed courses fulfill this requirement
+                for course_id, gen_eds in course_gen_eds.items():
+                    if req['code'] in gen_eds:
+                        fulfilled_courses.append(course_id)
+                
+                is_fulfilled = len(fulfilled_courses) > 0
+                if is_fulfilled:
+                    completed_count += 1
+                
+                # Get available courses for this gen ed (limit to 10 for performance)
+                cur.execute("""
+                    SELECT DISTINCT c.course_id
+                    FROM courses c
+                    JOIN gen_ed_fulfillments g ON c.id = g.course_id
+                    WHERE g.gen_ed_code = %s
+                    AND c.course_id NOT IN %s
+                    LIMIT 10
+                """, (req['code'], tuple(course_progress.completed_courses) if course_progress.completed_courses else ('',)))
+                
+                available = [row['course_id'] for row in cur.fetchall()]
+                
+                results.append({
+                    "code": req['code'],
+                    "name": req['name'],
+                    "description": req.get('description', ''),
+                    "fulfilled": is_fulfilled,
+                    "courses_taken": fulfilled_courses,
+                    "courses_available": available
+                })
+            
+            return {
+                "requirements": results,
+                "completed_count": completed_count,
+                "total_count": len(gen_ed_requirements)
+            }
+
 
 ## Planning Endpoints
 @app.post("/api/planner/check-prerequisites", response_model=PrerequisiteCheckResponse)
@@ -375,6 +540,31 @@ def validate_semester(semester_courses: List[str], completed_courses: List[str])
         "semester_valid": all(r["valid"] for r in validation_results),
         "course_validations": validation_results
     }
+
+@app.get("/api/programs")
+def search_programs(q: str = "", type: str = None):
+    """Search for programs by name or type."""
+    with get_db_connection() as conn:
+        with conn.cursor(cursor_factory=RealDictCursor) as cur:
+            query = """
+                SELECT id, program_id, name, program_type, degree_type, total_hours
+                FROM programs
+                WHERE 1=1
+            """
+            params = []
+            
+            if q:
+                query += " AND name ILIKE %s"
+                params.append(f"%{q}%")
+            
+            if type and type != 'all':
+                query += " AND program_type = %s"
+                params.append(type)
+            
+            query += " ORDER BY name LIMIT 50"
+            
+            cur.execute(query, params)
+            return cur.fetchall()
 
 if __name__ == "__main__":
     import uvicorn

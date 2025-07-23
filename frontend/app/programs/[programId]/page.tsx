@@ -7,7 +7,6 @@ import { ArrowLeft, GraduationCap, BookOpen, CheckCircle, Circle, Loader2 } from
 import Link from 'next/link';
 import { programApi } from '@/lib/api';
 import { ProgramRequirement } from '@/types/program';
-import { cn } from '@/lib/utils';
 
 export default function ProgramDetailPage() {
   const params = useParams();
@@ -15,7 +14,7 @@ export default function ProgramDetailPage() {
 
   const { data: program, isLoading: programLoading } = useQuery({
     queryKey: ['program', programId],
-    queryFn: () => programApi.getProgram(programId),
+    queryFn: () => programApi.getOne(programId),
   });
 
   const { data: requirements, isLoading: reqLoading } = useQuery({
@@ -134,7 +133,7 @@ function RequirementCard({ requirement }: { requirement: ProgramRequirement }) {
         <h4 className="font-medium text-gray-900">
           {requirement.category_name || requirement.requirement_type}
         </h4>
-        
+
         <div className="flex flex-wrap gap-2 mt-1 text-sm text-gray-600">
           {requirement.min_credits && (
             <span>{requirement.min_credits} credits</span>
@@ -163,8 +162,8 @@ function RequirementCard({ requirement }: { requirement: ProgramRequirement }) {
       {hasSpecificCourses && (
         <div className="mt-3">
           <p className="text-sm text-gray-600 mb-2">
-            {requirement.courses.every(c => c.is_required) 
-              ? 'Required courses:' 
+            {requirement.courses.every(c => c.is_required)
+              ? 'Required courses:'
               : 'Choose from:'}
           </p>
           <div className="grid gap-2">
